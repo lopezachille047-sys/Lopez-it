@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ACHILLE GAMES</title>
+<style>
+body{margin:0;background:#080d16;color:white;font-family:Arial,sans-serif}
+header{text-align:center;padding:25px 10px;background:#101b2c}
+h1{color:#20e878}
+input{width:85%;padding:13px;margin:15px;border-radius:10px;border:0}
+main{padding:15px}
+.jeu{background:#162235;margin:15px 0;padding:20px;border-radius:14px;border:1px solid #293b52}
+h2{font-size:20px}
+a{display:block;text-align:center;background:#16c967;color:#06130a;padding:12px;border-radius:8px;text-decoration:none;font-weight:bold}
+footer{text-align:center;color:#aaa;padding:25px}
+</style>
+</head>
+<body>
+<header>
+<h1>🎮 ACHILLE GAMES</h1>
+<p>Tes jeux mobiles préférés au même endroit !</p>
+</header>
+<center>
+<input id="recherche" placeholder="🔎 Chercher un jeu..." oninput="filtrer()">
+</center>
+<main id="liste">
+<div class="jeu"><h2>⚽ Dream League Soccer</h2><p>Football mobile</p><a href="https://play.google.com/store/search?q=Dream%20League%20Soccer&c=apps">Télécharger / Installer</a></div>
+<div class="jeu"><h2>⚽ eFootball</h2><p>Football réaliste</p><a href="https://play.google.com/store/search?q=eFootball&c=apps">Télécharger / Installer</a></div>
+<div class="jeu"><h2>🔥 Free Fire</h2><p>Action et survie</p><a href="https://play.google.com/store/search?q=Free%20Fire&c=apps">Télécharger / Installer</a></div>
+<div class="jeu"><h2>🎯 Call of Duty Mobile</h2><p>Jeu de tir</p><a href="https://play.google.com/store/search?q=Call%20of%20Duty%20Mobile&c=apps">Télécharger / Installer</a></div>
+<div class="jeu"><h2>🏎️ Asphalt</h2><p>Courses automobiles</p><a href="https://play.google.com/store/search?q=Asphalt&c=apps">Télécharger / Installer</a></div>
+<div class="jeu"><h2>🎮 Roblox</h2><p>Des milliers d'expériences</p><a href="https://play.google.com/store/search?q=Roblox&c=apps">Télécharger / Installer</a></div>
+<div class="jeu"><h2>⛏️ Minecraft</h2><p>Construction et aventure</p><a href="https://play.google.com/store/search?q=Minecraft&c=apps">Voir sur Google Play</a></div>
+<div class="jeu"><h2>🎮 PUBG Mobile</h2><p>Action multijoueur</p><a href="https://play.google.com/store/search?q=PUBG%20Mobile&c=apps">Télécharger / Installer</a></div>
+</main>
+<footer>© 2026 ACHILLE GAMES</footer>
+<script>
+function filtrer(){
+let q=document.getElementById('recherche').value.toLowerCase();
+document.querySelectorAll('.jeu').forEach(j=>{
+j.style.display=j.innerText.toLowerCase().includes(q)?'block':'none';
+});
+}
+</script>
+</body>
+</html>
